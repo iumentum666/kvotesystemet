@@ -22,7 +22,7 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-<table class="table"cellspacing="0" cellpadding="3" rules="all" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:1300px;border-collapse:collapse;">
+<table class="table" cellspacing="0" cellpadding="3" rules="all" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:1300px;border-collapse:collapse;">
     <thead>
         <tr style="color:White;background-color:#006699;font-weight:bold;">
             <th>
@@ -44,28 +44,29 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ansattnr)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.T0e)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.T0eNavn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fornavn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Etternavn)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Ansattnr">Edit</a> | 
-                <a asp-action="Details" asp-route-id="@item.Ansattnr">Mer</a>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ansattnr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.T0e)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.T0eNavn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fornavn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Etternavn)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Ansattnr">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Ansattnr">Mer</a>
 
-</tr>
-}
+            </tr>
+        }
     </tbody>
 </table>

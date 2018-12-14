@@ -34,6 +34,7 @@ namespace Kvotesystemet.Controllers
             { 
                 kvotefiler = kvotefiler.Where(s => s.OppdatertDato > DateTime.Today.AddDays(-10));
             }
+
             kvotefiler = kvotefiler.OrderByDescending(s => s.OppdatertDato);
 
             return View(await kvotefiler.ToListAsync());
