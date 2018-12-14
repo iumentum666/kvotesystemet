@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Kvotesystemet.Models.TblKvotedefinisjoner>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" cellspacing="0" cellpadding="3" rules="all" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:1300px;border-collapse:collapse;">
+    <thead>
+        <tr style="color:White;background-color:#006699;font-weight:bold;">
+            <th>
+                @Html.DisplayNameFor(model => model.Kvote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Øl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gratis)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kvote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Øl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gratis)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Kvote">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

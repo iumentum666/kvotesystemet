@@ -1,0 +1,69 @@
+﻿@model Kvotesystemet.Models.TblMaterialMaster
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TblMaterialMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Legacy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Legacy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tekst)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tekst)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Liter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Liter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mg1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mg1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IkkeTillatt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IkkeTillatt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Brus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Brus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Øl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Øl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpsizeTs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpsizeTs)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Bsp1" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

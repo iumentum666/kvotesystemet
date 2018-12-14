@@ -1,0 +1,68 @@
+﻿@model Kvotesystemet.Models.TblMaterialMaster
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>TblMaterialMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Legacy" class="control-label"></label>
+                <input asp-for="Legacy" class="form-control" />
+                <span asp-validation-for="Legacy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bsp1" class="control-label"></label>
+                <input asp-for="Bsp1" class="form-control" />
+                <span asp-validation-for="Bsp1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tekst" class="control-label"></label>
+                <input asp-for="Tekst" class="form-control" />
+                <span asp-validation-for="Tekst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Liter" class="control-label"></label>
+                <input asp-for="Liter" class="form-control" />
+                <span asp-validation-for="Liter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mg1" class="control-label"></label>
+                <input asp-for="Mg1" class="form-control" />
+                <span asp-validation-for="Mg1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IkkeTillatt" class="control-label"></label>
+                <input asp-for="IkkeTillatt" class="form-control" />
+                <span asp-validation-for="IkkeTillatt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Brus" class="control-label"></label>
+                <input asp-for="Brus" class="form-control" />
+                <span asp-validation-for="Brus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Øl" class="control-label"></label>
+                <input asp-for="Øl" class="form-control" />
+                <span asp-validation-for="Øl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

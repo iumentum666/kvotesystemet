@@ -1,0 +1,66 @@
+﻿@model Kvotesystemet.Models.TblMaterialMaster
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TblMaterialMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Legacy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Legacy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tekst)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tekst)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Liter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Liter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mg1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mg1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IkkeTillatt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IkkeTillatt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Brus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Brus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Øl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Øl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpsizeTs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpsizeTs)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Bsp1">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

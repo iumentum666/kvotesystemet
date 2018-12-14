@@ -1,0 +1,124 @@
+﻿@model IEnumerable<Kvotesystemet.Models.TblKvotefilerFraZalaris>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" cellspacing="0" cellpadding="3" rules="all" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:1300px;border-collapse:collapse;">
+    <thead>
+        <tr style="color:White;background-color:#006699;font-weight:bold;">
+            <th>
+                @Html.DisplayNameFor(model => model.Ansattnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fornavn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Etternavn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ansettelsesdato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kvotekode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StillingStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stilling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OppdatertDato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Materialnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Antall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalgsDato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Øl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gratis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GratisBrus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ansattnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fornavn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etternavn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ansettelsesdato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kvotekode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StillingStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stilling)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OppdatertDato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Materialnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Antall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalgsDato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Øl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gratis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GratisBrus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

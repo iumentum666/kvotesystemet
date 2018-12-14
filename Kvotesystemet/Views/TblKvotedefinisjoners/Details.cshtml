@@ -1,0 +1,42 @@
+﻿@model Kvotesystemet.Models.TblKvotedefinisjoner
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TblKvotedefinisjoner</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Øl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Øl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Brus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Brus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gratis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gratis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpsizeTs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpsizeTs)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Kvote">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

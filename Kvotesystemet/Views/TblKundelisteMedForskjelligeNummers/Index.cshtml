@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Kvotesystemet.Models.TblKundelisteMedForskjelligeNummer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+
+<form asp-controller="TblKundelisteMedForskjelligeNummers" asp-action="Index" method="get">
+    <p>
+        Ansattnr: <input type="text" name="ansnr" size="10">
+        <input type="submit" value="Søk" />
+        Kundenr: <input type="text" name="kunnr" size="10">
+        <input type="submit" value="Søk" />
+        Fornavn: <input type="text" name="forn">
+        <input type="submit" value="Søk" />
+        Etternavn: <input type="text" name="ettern">
+        <input type="submit" value="Søk" />
+    </p>
+</form>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table"cellspacing="0" cellpadding="3" rules="all" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:1300px;border-collapse:collapse;">
+    <thead>
+        <tr style="color:White;background-color:#006699;font-weight:bold;">
+            <th>
+                @Html.DisplayNameFor(model => model.Ansattnr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.T0e)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.T0eNavn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fornavn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Etternavn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ansattnr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.T0e)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.T0eNavn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fornavn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etternavn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Ansattnr">Edit</a> | 
+                <a asp-action="Details" asp-route-id="@item.Ansattnr">Mer</a>
+
+</tr>
+}
+    </tbody>
+</table>
