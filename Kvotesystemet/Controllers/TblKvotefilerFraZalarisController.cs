@@ -28,10 +28,12 @@ namespace Kvotesystemet.Controllers
             if (!String.IsNullOrEmpty(ansnr))
             {
                 kvotefiler = kvotefiler.Where(s => s.Ansattnummer.Equals(Convert.ToDouble(ansnr)));
+                kvotefiler = kvotefiler.Where(s => s.OppdatertDato > DateTime.Today.AddMonths(-3));
             }
-
-            kvotefiler = kvotefiler.Where(s => s.OppdatertDato > DateTime.Today.AddDays(-90));
-
+            else
+            { 
+                kvotefiler = kvotefiler.Where(s => s.OppdatertDato > DateTime.Today.AddDays(-10));
+            }
             kvotefiler = kvotefiler.OrderByDescending(s => s.OppdatertDato);
 
             return View(await kvotefiler.ToListAsync());
