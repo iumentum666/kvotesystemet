@@ -30,6 +30,9 @@ namespace Kvotesystemet.Controllers
                 kvotefiler = kvotefiler.Where(s => s.Ansattnummer.Equals(Convert.ToDouble(ansnr)));
             }
 
+            kvotefiler = kvotefiler.Where(s => s.OppdatertDato > DateTime.Today.AddDays(-90));
+
+            kvotefiler = kvotefiler.OrderByDescending(s => s.OppdatertDato);
 
             return View(await kvotefiler.ToListAsync());
         }
@@ -42,19 +45,11 @@ namespace Kvotesystemet.Controllers
                 return NotFound();
             }
 
-            //var tblKvotefilerFraZalaris = await _context.TblKvotefilerFraZalaris
-            //    .FirstOrDefaultAsync(m => m.Ansattnummer == id);
-            //if (tblKvotefilerFraZalaris == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //return View(tblKvotefilerFraZalaris);
             var kvotefiler = from m in _context.TblKvotefilerFraZalaris
                              select m;
                 kvotefiler = kvotefiler.Where(s => s.Ansattnummer.Equals(id));
-            
 
+            kvotefiler = kvotefiler.OrderByDescending(s => s.OppdatertDato);
 
             return View(await kvotefiler.ToListAsync());
 
