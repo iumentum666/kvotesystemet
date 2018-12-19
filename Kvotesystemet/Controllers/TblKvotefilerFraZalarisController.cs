@@ -38,7 +38,17 @@ namespace Kvotesystemet.Controllers
             kvotefiler = kvotefiler.OrderByDescending(s => s.OppdatertDato);
 
             return View(await kvotefiler.ToListAsync());
+
+            //ViewBag.TotalKvote = TblKvotefilerFraZalarisController.Database.ExecuteSqlCommand("dbo.FinneKvoter", ansnr);
+
+            //return View();
+
+
         }
+
+
+
+
 
         // GET: TblKvotefilerFraZalaris/Details/5
         public async Task<IActionResult> Details(double? id)
