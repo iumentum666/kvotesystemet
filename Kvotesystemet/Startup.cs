@@ -35,7 +35,8 @@ namespace Kvotesystemet
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            var connection = @"Server = localhost; Database = kvotesystem_SQLSQL; User ID = kvotesystemet; Password = kvotesystemet; Trusted_Connection = False";
+            var connection = @"Server = 10.98.4.60; Database = kvotesystem_SQLSQL; User ID = kvotesystemet; Password = kvotesystemet; Trusted_Connection = False";
+            // var connection = @"Server = localhost; Database = kvotesystem_SQLSQL; User ID = kvotesystemet; Password = kvotesystemet; Trusted_Connection = False";
             services.AddDbContext<kvotesystem_SQLSQLContext>(options => options.UseSqlServer(connection));
         }
 
