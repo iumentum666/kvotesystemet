@@ -112,7 +112,7 @@ namespace Kvotesystemet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Ansattnummer,Status,Fornavn,Etternavn,Ansettelsesdato,Kvotekode,StillingStatus,Stilling,OppdatertDato,Materialnummer,Antall,SalgsDato,Øl,Brus,Gratis,GratisBrus,UpsizeTs")] TblKvotefilerFraZalaris tblKvotefilerFraZalaris)
+        public async Task<IActionResult> Edit(int id, [Bind("Ansattnummer,Status,Fornavn,Etternavn,Ansettelsesdato,Kvotekode,StillingStatus,Stilling,OppdatertDato,Materialnummer,Antall,SalgsDato,Øl,Brus,Gratis,GratisBrus")] TblKvotefilerFraZalaris tblKvotefilerFraZalaris)
         {
             if (id != tblKvotefilerFraZalaris.Id)
             {
