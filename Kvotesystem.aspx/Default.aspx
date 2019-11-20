@@ -28,9 +28,9 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Ansattnr" DataSourceID="SqlDataSource1" Height="74px" Width="600px">
                 <Columns>
                     <asp:BoundField DataField="Ansattnr" HeaderText="Ansattnr" ReadOnly="True" SortExpression="Ansattnr" />
-                    <asp:BoundField DataField="TotaltØl" HeaderText="TotaltØl" SortExpression="TotaltØl" ReadOnly="True" DataFormatString="{0:F}" />
-                    <asp:BoundField DataField="TotaltBrus" HeaderText="TotaltBrus" ReadOnly="True" SortExpression="TotaltBrus" DataFormatString="{0:F}" />
-                    <asp:BoundField DataField="TotaltGratis" HeaderText="TotaltGratis" ReadOnly="True" SortExpression="TotaltGratis" DataFormatString="{0:F}" />
+                    <asp:BoundField DataField="TotaltØl" HeaderText="Øl" SortExpression="TotaltØl" ReadOnly="True" DataFormatString="{0:F}" />
+                    <asp:BoundField DataField="TotaltBrus" HeaderText="Brus" ReadOnly="True" SortExpression="TotaltBrus" DataFormatString="{0:F}" />
+                    <asp:BoundField DataField="TotaltGratis" HeaderText="Gratis" ReadOnly="True" SortExpression="TotaltGratis" DataFormatString="{0:F}" />
                 </Columns>
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:kvotesystem_SQLSQLConnectionString %>" SelectCommand="FinneKvoter_sum" SelectCommandType="StoredProcedure">
@@ -43,7 +43,7 @@
         </div>
     </div>
   <p>&nbsp;</p>
-  <p class="lead" style="font-size: large">Det er kun klasse D øl intill 4.7% som kan kjøpes på ansatt-kvote</p>
+  <p class="lead" style="font-size: large">Det er kun klasse D øl inntil 4.7% som kan kjøpes på ansatt-kvote</p>
        <div class="row">
         Retningslinjer ift gjeldende Personalkjøpsordning ref Personalhåndboken finner du under om du er i tvil - det kan hende man må via <asp:HyperLink id="hyperlink2" 
                   NavigateUrl="https://carlsberggroup.sharepoint.com/norway"
