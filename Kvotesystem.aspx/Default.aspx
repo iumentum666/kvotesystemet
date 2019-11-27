@@ -39,10 +39,40 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </div>
+             <p>
+
+             </p>
         <div class="col-md-4">
+
+                  <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2">
+          <Columns>
+              <asp:BoundField DataField="DatoOppdatert" DataFormatString="{0:d}" HeaderText="Salgstall Oppdatert" SortExpression="DatoOppdatert">
+              <ItemStyle BorderStyle="None" />
+              </asp:BoundField>
+          </Columns>
+      </asp:GridView>
+      <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Width="136px">
+          <Columns>
+              <asp:BoundField DataField="DatoOppdatert" DataFormatString="{0:d}" HeaderText="Kvoter Oppdatert" SortExpression="DatoOppdatert">
+              <ItemStyle BorderStyle="None" />
+              </asp:BoundField>
+          </Columns>
+      </asp:GridView>
+      <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:kvotesystem_SQLSQLConnectionString %>" SelectCommand="SELECT 
+             [DatoOppdatert]
+  FROM [kvotesystem_SQLSQL].[dbo].[KvoteOppdatert]
+  Where [Benevning] = 'Kvotetall';"></asp:SqlDataSource>
+      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:kvotesystem_SQLSQLConnectionString %>" SelectCommand="SELECT 
+      [DatoOppdatert]
+  FROM [kvotesystem_SQLSQL].[dbo].[KvoteOppdatert]
+  Where [Benevning] = 'Salgstall';"></asp:SqlDataSource>
+
+
         </div>
     </div>
-  <p>&nbsp;</p>
+  <p>
+
+ </p>
   <p class="lead" style="font-size: large">Det er kun klasse D øl inntil 4.7% som kan kjøpes på ansatt-kvote</p>
        <div class="row">
         Retningslinjer ift gjeldende Personalkjøpsordning ref Personalhåndboken finner du under om du er i tvil - det kan hende man må via <asp:HyperLink id="hyperlink2" 
