@@ -15,7 +15,8 @@
                
 &nbsp;</p>
         <div class="col-md-4">Husk at vikar-ansattnummer er mellom 80000 og 84000 (spør IT om du er i tvil)
-                Øl er i liter, brus er i kasser. 
+                <br />
+            <strong>Øl er i liter, brus er i kasser. </strong> 
             <br />
             1 kasse 0,33 øl er 7,92 liter.<br />
             1 brett 0.5 øl er 12 liter.<br />
@@ -44,20 +45,13 @@
              </p>
         <div class="col-md-4">
 
-                  <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2">
-          <Columns>
-              <asp:BoundField DataField="DatoOppdatert" DataFormatString="{0:d}" HeaderText="Salgstall Oppdatert" SortExpression="DatoOppdatert">
-              <ItemStyle BorderStyle="None" />
-              </asp:BoundField>
-          </Columns>
-      </asp:GridView>
-      <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Width="136px">
-          <Columns>
-              <asp:BoundField DataField="DatoOppdatert" DataFormatString="{0:d}" HeaderText="Kvoter Oppdatert" SortExpression="DatoOppdatert">
-              <ItemStyle BorderStyle="None" />
-              </asp:BoundField>
-          </Columns>
-      </asp:GridView>
+                  <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4">
+                      <Columns>
+                          <asp:BoundField DataField="Benevning" HeaderText="Benevning" SortExpression="Benevning" />
+                          <asp:BoundField DataField="DatoOppdatert" DataFormatString="{0:d}" HeaderText="DatoOppdatert" SortExpression="DatoOppdatert" />
+                      </Columns>
+                  </asp:GridView>
+                  <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:kvotesystem_SQLSQLConnectionString %>" SelectCommand="SELECT [Benevning], [DatoOppdatert] FROM [KvoteOppdatert]"></asp:SqlDataSource>
       <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:kvotesystem_SQLSQLConnectionString %>" SelectCommand="SELECT 
              [DatoOppdatert]
   FROM [kvotesystem_SQLSQL].[dbo].[KvoteOppdatert]
